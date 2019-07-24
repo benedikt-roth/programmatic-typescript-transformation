@@ -1,0 +1,14 @@
+{
+  "name": "ts-to-ts-transform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "transform": "./node_modules/.bin/ts-morph"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-morph": "^3.1.3"
+  }
+}
