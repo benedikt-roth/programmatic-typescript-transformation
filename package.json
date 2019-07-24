@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "pre-transform": "rm -r out && cp dummy-files out",
     "transform": "./node_modules/.bin/ts-node src/transform.ts"
   },
   "author": "",

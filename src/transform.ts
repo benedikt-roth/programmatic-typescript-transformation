@@ -1,14 +1,14 @@
-import { Project, StructureKind } from "ts-morph";
+import { Project } from "ts-morph";
 
-// initialize
 const project = new Project({
   compilerOptions: {
     outDir: 'out',
   },
 });
+const workingDir = 'out';
 
-project.addExistingSourceFiles("dummy-files/**/*.ts");
-const myClassFile = project.createSourceFile("dummy-files/MyClass.ts", "export class MyClass {}");
+project.addExistingSourceFiles(`${workingDir}/**/*.ts`);
+const myClassFile = project.createSourceFile(`${workingDir}/MyClass.ts`, "export class MyClass {}");
 
 const myClass = myClassFile.getClassOrThrow("MyClass");
 myClass.getName();
