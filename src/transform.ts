@@ -15,13 +15,9 @@ myClass.getName();
 myClass.hasExportKeyword();
 myClass.isDefaultExport();
 
-const myInterface = myClassFile.addInterface({
-    name: "IMyInterface",
-    isExported: true,
-    properties: [{
-        name: "myProp",
-        type: "number"
-    }]
+const testFile = project.getSourceFileOrThrow(`${workingDir}/test.ts`);
+testFile.getNamespaces().forEach(ns => {
+  ns.unwrap();
 });
 
 project.save();

@@ -1,3 +1,3 @@
-namespace test.components.common {
+namespace test {
   const tester = 'Hello world!';
 }
